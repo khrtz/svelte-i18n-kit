@@ -1,0 +1,37 @@
+{
+  "name": "svelte-i18n-kit",
+  "version": "0.1.0",
+  "description": "A SvelteKit SSR compatible i18n libraryity",
+  "author": "",
+  "license": "MIT",
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "i18n",
+    "internationalization",
+    "localization",
+    "translation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/khrtz/svelte-i18n-kit"
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./index.d.ts",
+      "svelte": "./index.js"
+    },
+    "./components": {
+      "types": "./components/index.d.ts",
+      "svelte": "./components/index.js"
+    }
+  },
+  "type": "module",
+  "peerDependencies": {
+    "svelte": "^4.0.0",
+    "svelte-i18n": "^3.4.0",
+    "@sveltejs/kit": "^1.20.0"
+  }
+} 

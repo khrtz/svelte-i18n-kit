@@ -1,0 +1,31 @@
+{
+  "title": "Svelte i18n Kit Demo",
+  "description": "This is a demo of the Svelte i18n Kit",
+  "greeting": "Hello, {name}!",
+  "counter": {
+    "value": "Count: {count}",
+    "increment": "Increment",
+    "decrement": "Decrement"
+  },
+  "dateTime": {
+    "title": "Date and Time Formatting",
+    "today": "Today is {date}",
+    "now": "Current time is {time}"
+  },
+  "numberFormat": {
+    "title": "Number Formatting",
+    "value": "Value: {value}",
+    "currency": "Price: {price}"
+  },
+  "plurals": {
+    "title": "Pluralization",
+    "items": {
+      "0": "No items",
+      "1": "One item",
+      "other": "{count} items"
+    }
+  },
+  "nested": {
+    "message": "This is a nested message"
+  }
+} 

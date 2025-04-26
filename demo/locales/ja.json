@@ -1,0 +1,31 @@
+{
+  "title": "Svelte i18n キットデモ",
+  "description": "これはSvelte i18n キットのデモです",
+  "greeting": "こんにちは、{name}さん！",
+  "counter": {
+    "value": "カウント: {count}",
+    "increment": "増加",
+    "decrement": "減少"
+  },
+  "dateTime": {
+    "title": "日付と時刻のフォーマット",
+    "today": "今日は {date} です",
+    "now": "現在時刻は {time} です"
+  },
+  "numberFormat": {
+    "title": "数値フォーマット",
+    "value": "値: {value}",
+    "currency": "価格: {price}"
+  },
+  "plurals": {
+    "title": "複数形",
+    "items": {
+      "0": "アイテムなし",
+      "1": "1つのアイテム",
+      "other": "{count}個のアイテム"
+    }
+  },
+  "nested": {
+    "message": "これはネストされたメッセージです"
+  }
+} 

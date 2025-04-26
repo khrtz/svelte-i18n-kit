@@ -1,0 +1,31 @@
+{
+  "title": "Svelte i18n 키트 데모",
+  "description": "이것은 Svelte i18n 키트의 데모입니다",
+  "greeting": "안녕하세요, {name}님!",
+  "counter": {
+    "value": "카운트: {count}",
+    "increment": "증가",
+    "decrement": "감소"
+  },
+  "dateTime": {
+    "title": "날짜 및 시간 형식",
+    "today": "오늘은 {date} 입니다",
+    "now": "현재 시간은 {time} 입니다"
+  },
+  "numberFormat": {
+    "title": "숫자 형식",
+    "value": "값: {value}",
+    "currency": "가격: {price}"
+  },
+  "plurals": {
+    "title": "복수형",
+    "items": {
+      "0": "항목 없음",
+      "1": "한 개의 항목",
+      "other": "{count}개의 항목"
+    }
+  },
+  "nested": {
+    "message": "이것은 중첩된 메시지입니다"
+  }
+} 

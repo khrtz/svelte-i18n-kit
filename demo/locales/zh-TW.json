@@ -1,0 +1,31 @@
+{
+  "title": "Svelte i18n 工具包演示",
+  "description": "這是Svelte i18n 工具包的演示",
+  "greeting": "你好，{name}！",
+  "counter": {
+    "value": "計數: {count}",
+    "increment": "增加",
+    "decrement": "減少"
+  },
+  "dateTime": {
+    "title": "日期和時間格式",
+    "today": "今天是 {date}",
+    "now": "現在時間是 {time}"
+  },
+  "numberFormat": {
+    "title": "數字格式",
+    "value": "值: {value}",
+    "currency": "價格: {price}"
+  },
+  "plurals": {
+    "title": "複數形式",
+    "items": {
+      "0": "沒有項目",
+      "1": "一個項目",
+      "other": "{count}個項目"
+    }
+  },
+  "nested": {
+    "message": "這是一個嵌套消息"
+  }
+} 
