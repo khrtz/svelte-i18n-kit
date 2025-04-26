@@ -1,26 +1,26 @@
 # svelte-i18n-kit
 
-SvelteKit向けの包括的な国際化(i18n)ライブラリです。サーバーサイドレンダリング(SSR)にも完全対応しています。
+Comprehensive internationalization (i18n) library for SvelteKit with full server-side rendering (SSR) support.
 
-## 特徴
+## Features
 
-- 完全なSvelteKit統合
-- SSR対応
-- 簡単なセットアップ
-- 言語選択UIコンポーネント付き
-- ブラウザの言語設定に基づく自動検出
-- localStorage による言語設定の保存
-- 型安全な実装
+- Complete SvelteKit integration
+- SSR support
+- Simple setup
+- Language selection UI component
+- Automatic detection based on browser language settings
+- Language preference storage with localStorage
+- Type-safe implementation
 
-## インストール
+## Installation
 
 ```bash
 npm install svelte-i18n-kit
 ```
 
-## 基本的な使い方
+## Basic Usage
 
-### 1. i18n設定とトランスレーションファイルの準備
+### 1. Setup i18n configuration and translation files
 
 ```typescript
 // src/lib/i18n.ts
@@ -48,27 +48,27 @@ initializeI18n({
 });
 ```
 
-### 2. SvelteKitのフックで初期化
+### 2. Initialize in SvelteKit hooks
 
 ```typescript
 // src/hooks.server.ts
 import { createI18nHandle } from 'svelte-i18n-kit';
-import './lib/i18n'; // i18n設定をインポート
+import './lib/i18n'; // Import i18n config
 
 export const handle = createI18nHandle();
 ```
 
-### 3. クライアントサイドの初期化
+### 3. Client-side initialization
 
 ```typescript
 // src/routes/+layout.ts
 import { browser } from '$app/environment';
 import { setupI18n, resetInitialization } from 'svelte-i18n-kit';
-import '../lib/i18n'; // i18n設定をインポート
+import '../lib/i18n'; // Import i18n config
 
 export const load = async () => {
   if (browser) {
-    // クライアントサイドでi18nを初期化
+    // Initialize i18n on the client side
     resetInitialization();
     setupI18n();
   }
@@ -77,7 +77,7 @@ export const load = async () => {
 };
 ```
 
-### 4. 翻訳の使用
+### 4. Using translations
 
 ```svelte
 <!-- src/routes/+page.svelte -->
@@ -89,7 +89,7 @@ export const load = async () => {
 <p>{t('description', 'This is a default description')}</p>
 ```
 
-### 5. 言語選択コンポーネントの使用
+### 5. Using the language selector component
 
 ```svelte
 <!-- src/components/Header.svelte -->
@@ -99,7 +99,7 @@ export const load = async () => {
 
 <header>
   <nav>
-    <!-- その他のナビゲーション要素 -->
+    <!-- Other navigation elements -->
     <LanguageSelector />
   </nav>
 </header>
@@ -107,39 +107,35 @@ export const load = async () => {
 
 ## API
 
-### コア関数
+### Core Functions
 
-- `initializeI18n(config)` - i18nの初期設定
-- `setupI18n()` - クライアントサイドの初期化
-- `setupI18nSSR()` - サーバーサイドの初期化
-- `resetInitialization()` - 初期化状態をリセット
-- `changeLocale(locale)` - 言語を変更
-- `t(key, defaultValue, values?)` - 翻訳取得（デフォルト値付き）
-- `hasTranslation(key, locale)` - 翻訳キーが存在するか確認
+- `initializeI18n(config)` - Initial i18n setup
+- `setupI18n()` - Client-side initialization
+- `setupI18nSSR()` - Server-side initialization
+- `resetInitialization()` - Reset initialization state
+- `changeLocale(locale)` - Change language
+- `t(key, defaultValue, values?)` - Get translation with default value
+- `hasTranslation(key, locale)` - Check if translation key exists
 
-### ストア
+### Stores
 
-- `i18nConfig` - i18n設定を保持するストア
-- `currentLocale` - 現在の言語コード
-- `currentCountry` - 現在の言語の国コード
+- `i18nConfig` - Store holding i18n configuration
+- `currentLocale` - Current language code
+- `currentCountry` - Current language country code
 
-### svelte-i18n再エクスポート
+### Re-exports from svelte-i18n
 
-- `_` - svelte-i18nの翻訳関数
-- `locale` - 現在の言語ストア
-- `dictionary` - 翻訳辞書ストア
+- `_` - Translation function from svelte-i18n
+- `locale` - Current language store
+- `dictionary` - Translation dictionary store
 
-## サンプル実装
+## Examples
 
-このプロジェクトに含まれる以下のディレクトリを参照してください：
+Refer to these directories included in the project:
 
-- `src/lib/svelte-i18n-kit` - ライブラリのソースコード
-- `src/lib/svelte-i18n-kit/components` - コンポーネント
+- `src/lib/svelte-i18n-kit` - Library source code
+- `src/lib/svelte-i18n-kit/components` - Components
 
-## コントリビュート
-
-プルリクエストを歓迎します。大きな変更を加える場合は、まずissueを開いて議論してください。
-
-## ライセンス
+## License
 
 MIT 
